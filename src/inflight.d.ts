@@ -6,6 +6,8 @@ export type ExecuteOptions<T> = {
 export declare class InFlight {
     execute<T>(options: ExecuteOptions<T>): Promise<T>;
 
+    executeOrReject<T>(options: ExecuteOptions<T>): Promise<T>;
+
     has(queryKey: string): boolean;
 
     clear(queryKey?: string): void;
