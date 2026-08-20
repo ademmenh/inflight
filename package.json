@@ -1,0 +1,28 @@
+{
+  "name": "inflight",
+  "version": "1.0.0",
+  "description": "Deduplicate concurrent requests by queryKey",
+  "main": "dist/inflight.js",
+  "module": "dist/inflight.js",
+  "types": "dist/inflight.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "bun test src/tests/"
+  },
+  "keywords": [
+    "dedup",
+    "inflight",
+    "concurrent",
+    "request",
+    "query"
+  ],
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  }
+}
