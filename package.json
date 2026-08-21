@@ -11,7 +11,9 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "bun test src/tests/"
+    "test": "bun test src/tests/",
+    "bench": "bun run benchmarks/bench.ts",
+    "bench:docker": "docker compose -f benchmarks/docker-compose.yml up --build"
   },
   "keywords": [
     "dedup",
@@ -23,6 +25,9 @@
   "license": "GPL-3.0-only",
   "devDependencies": {
     "@types/bun": "latest",
+    "drizzle-orm": "^0.45.2",
+    "iovalkey": "^0.4.0",
+    "postgres": "^3.4.9",
     "typescript": "^5"
   }
 }
