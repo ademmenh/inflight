@@ -1,33 +1,43 @@
 {
-  "name": "inflight",
-  "version": "1.0.0",
-  "description": "Deduplicate concurrent requests by queryKey",
-  "main": "dist/inflight.js",
-  "module": "dist/inflight.js",
-  "types": "dist/inflight.d.ts",
-  "type": "module",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "tsc",
-    "test": "bun test src/tests/",
-    "bench": "bun run benchmarks/bench.ts",
-    "bench:docker": "docker compose -f benchmarks/docker-compose.yml up --build"
-  },
-  "keywords": [
-    "dedup",
-    "inflight",
-    "concurrent",
-    "request",
-    "query"
-  ],
-  "license": "GPL-3.0-only",
-  "devDependencies": {
-    "@types/bun": "latest",
-    "drizzle-orm": "^0.45.2",
-    "iovalkey": "^0.4.0",
-    "postgres": "^3.4.9",
-    "typescript": "^5"
-  }
+    "name": "@inflightjs/inflight",
+    "version": "0.0.0",
+    "description": "Deduplicate concurrent requests by queryKey",
+    "main": "dist/inflight.js",
+    "module": "dist/inflight.js",
+    "types": "dist/inflight.d.ts",
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "test": "bun test src/tests/",
+        "bench": "bun run benchmarks/bench.ts",
+        "bench:docker": "docker compose -f benchmarks/docker-compose.yml up --build",
+        "semantic-release": "semantic-release"
+    },
+    "keywords": [
+        "dedup",
+        "inflight",
+        "concurrent",
+        "request",
+        "query"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "license": "GPL-3.0-only",
+    "devDependencies": {
+        "@semantic-release/changelog": "^7.0.0",
+        "@semantic-release/commit-analyzer": "^13.0.1",
+        "@semantic-release/github": "^12.0.9",
+        "@semantic-release/npm": "^13.1.5",
+        "@semantic-release/release-notes-generator": "^14.1.1",
+        "@types/bun": "latest",
+        "drizzle-orm": "^0.45.2",
+        "iovalkey": "^0.4.0",
+        "postgres": "^3.4.9",
+        "semantic-release": "^25.0.9",
+        "typescript": "^5"
+    }
 }

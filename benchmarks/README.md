@@ -28,13 +28,13 @@ Benchmarks comparing request deduplication with and without `inflight` across Po
 
 ---
 
-## Experiment 2: Concurrency 10, Keys 10
+## Experiment 2: Concurrency 1000, Keys 10
 
 **Setup:**
 
 - Duration: 30s
 - Cache TTL: 5s
-- Concurrency: 10
+- Concurrency: 1000
 - Unique keys: 10
 
 | Metric        | With Inflight | Without Inflight |
@@ -55,5 +55,5 @@ Benchmarks comparing request deduplication with and without `inflight` across Po
 ## Key Takeaways
 
 - **Massive throughput growth**: With inflight, the system handles 6.5x-20x more total queries in the same time window because deduplication eliminates redundant wait time
-- **Higher concurrency reduces DB pressure**: At concurrency 100, DB calls drop to just 60 vs 517 (56x saved), compared to concurrency 10 with 300 vs 16,638 (1119x saved)
+- **Higher concurrency reduces DB pressure**: At concurrency 100, DB calls drop to just 60 vs 517 (56x saved), compared to concurrency 1000 with 300 vs 16,638 (1119x saved)
 - **Cache efficiency**: 10-100x fewer cache calls by deduplicating concurrent requests
