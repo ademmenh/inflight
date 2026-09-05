@@ -14,7 +14,7 @@ bun add inflight
 
 ## Usage
 
-```
+```ts
 import { InFlight } from "inflight";
 import { eq } from "drizzle-orm";
 import { users } from "./schema";
