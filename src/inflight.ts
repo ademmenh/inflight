@@ -45,7 +45,7 @@ export class InFlight {
   }
 
   clear(queryKey?: string): void {
-    if (queryKey) {
+    if (queryKey !== undefined) {
       this.inflight.delete(queryKey);
     } else {
       this.inflight.clear();
