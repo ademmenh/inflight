@@ -1,6 +1,6 @@
 {
     "name": "@inflightjs/inflight",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Deduplicate concurrent requests by queryKey",
     "repository": {
         "type": "git",
