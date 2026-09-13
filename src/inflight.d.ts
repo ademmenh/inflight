@@ -10,7 +10,9 @@ export declare class InFlight {
 
     has(queryKey: string): boolean;
 
-    clear(queryKey?: string): void;
+    clearOne(queryKey: string): void;
+
+    clearAll(): void;
 
     get size(): number;
 }

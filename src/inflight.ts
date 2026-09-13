@@ -44,12 +44,12 @@ export class InFlight {
     return this.inflight.has(queryKey);
   }
 
-  clear(queryKey?: string): void {
-    if (queryKey) {
-      this.inflight.delete(queryKey);
-    } else {
-      this.inflight.clear();
-    }
+  clearOne(queryKey: string): void {
+    this.inflight.delete(queryKey);
+  }
+
+  clearAll(): void {
+    this.inflight.clear();
   }
 
   get size(): number {
